@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="547.0" prefWidth="518.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examendi2.HelloController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <Label text="Calculo GER &amp; GET">
+      <font>
+         <Font name="System Bold Italic" size="36.0" />
+      </font>
+   </Label>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="267.0" spacing="20.0">
+      <children>
+         <Label fx:id="welcomeText11" text="Nombre usuario:">
+            <tooltip>
+               <Tooltip text="Introduce el nombre de usuario" />
+            </tooltip>
+         </Label>
+         <TextField fx:id="txtNombre">
+            <tooltip>
+               <Tooltip text="Introduce el nombre de usuario" />
+            </tooltip>
+         </TextField>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="20.0">
+      <children>
+
+         <Label fx:id="welcomeText" text="Sexo:">
+            <tooltip>
+               <Tooltip text="Selecciona el sexo" />
+            </tooltip>
+         </Label>
+         <RadioButton fx:id="radioHombre" mnemonicParsing="false" text="Hombre">
+            <toggleGroup>
+               <ToggleGroup fx:id="radioSexo" />
+            </toggleGroup>
+            <tooltip>
+               <Tooltip text="Sexo Hombre" />
+            </tooltip>
+         </RadioButton>
+         <RadioButton fx:id="radioMujer" mnemonicParsing="false" text="Mujer" toggleGroup="$radioSexo">
+            <tooltip>
+               <Tooltip text="Sexo Mujer" />
+            </tooltip>
+         </RadioButton>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="20.0">
+      <children>
+         <Label fx:id="welcomeText1" text="Peso:">
+            <tooltip>
+               <Tooltip text="Introduce el peso" />
+            </tooltip>
+         </Label>
+         <TextField fx:id="txtPeso">
+            <tooltip>
+               <Tooltip text="Escribe el peso" />
+            </tooltip>
+         </TextField>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="290.0" spacing="20.0">
+      <children>
+         <Label fx:id="welcomeText12" text="Edad:">
+            <tooltip>
+               <Tooltip text="Introduce la edad" />
+            </tooltip>
+         </Label>
+         <TextField fx:id="txtEdad">
+            <tooltip>
+               <Tooltip text="Escribe la edad" />
+            </tooltip>
+         </TextField>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="359.0" spacing="20.0">
+      <children>
+         <Label fx:id="welcomeText12111" text="Talla:">
+            <tooltip>
+               <Tooltip text="Introduce la talla" />
+            </tooltip>
+         </Label>
+         <TextField fx:id="txtTalla">
+            <tooltip>
+               <Tooltip text="Escribe la talla" />
+            </tooltip>
+         </TextField>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="382.0" spacing="20.0">
+      <children>
+         <Label fx:id="welcomeText121111" text="Tipo de actividad:">
+            <tooltip>
+               <Tooltip text="Selecciona el tipo de actividad" />
+            </tooltip>
+         </Label>
+         <ComboBox fx:id="comboActividad" prefWidth="150.0">
+            <tooltip>
+               <Tooltip text="Despliega y selecciona el tipo de actividad" />
+            </tooltip>
+         </ComboBox>
+      </children>
+   </HBox>
+   <Label fx:id="welcomeText1211111" text="Observaciones: (opcional)">
+      <tooltip>
+         <Tooltip text="Introduce alguna observacion" />
+      </tooltip>
+   </Label>
+   <TextArea fx:id="txtObservaciones" prefHeight="200.0" prefWidth="200.0">
+      <tooltip>
+         <Tooltip text="Escribe alguna observacion" />
+      </tooltip>
+   </TextArea>
+   <Button fx:id="btnCalcular" onAction="#calcular" text="Calcular" />
+   <Button fx:id="btnDescargar" layoutX="238.0" layoutY="474.0" onAction="#descargarPdf" text="Descargar PDF" />
+   <Label fx:id="labelInfo" style="-fx-background-color: #9CFFB3;" />
+</VBox>
